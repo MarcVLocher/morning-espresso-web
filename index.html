@@ -134,13 +134,17 @@
         }
         .button.mocha { background-color: var(--color-mocha); border-color: var(--color-mocha); }
         .button:hover { background-color: var(--color-bg); color: var(--color-text); }
+        .button.mocha:hover { background-color: var(--color-bg); color: var(--color-mocha); }
 
         .subscription-form { display: flex; flex-direction: column; gap: 15px; margin-top: 20px; max-width: 400px; }
-        .subscription-form input { padding: 12px; border: 1px solid #ccc; outline: none; }
+        .subscription-form input { padding: 12px; font-family: var(--font-sans); font-size: 16px; border: 1px solid #ccc; outline: none; }
+        .subscription-form input:focus { border-color: var(--color-mocha); }
 
+        /* Footer & Klapptexte */
         footer { margin-top: 80px; padding-top: 40px; border-top: 3px solid var(--color-text); }
         .footer-details { border-bottom: 1px solid var(--color-fir); }
         .footer-details summary { font-weight: 900; font-size: 16px; padding: 20px 0; cursor: pointer; text-transform: uppercase; list-style: none; display: flex; justify-content: space-between; }
+        .footer-details summary::-webkit-details-marker { display: none; }
         .footer-details summary::after { content: "+"; }
         .footer-details[open] summary::after { content: "-"; }
         .footer-content { font-size: 14px; padding-bottom: 30px; color: #333; text-align: justify; }
@@ -167,33 +171,33 @@
             <p>11.03.2026: SARON: -0,05% [- 1 bp]<br>
             12.03.2026: Confédération (10 J): 0.421% [- 1 bp]<br>
             Swap (10 J): 0,6125 % [unverändert]</p>
-            <p><em>Einordnung:</em> Der Swap von 0,6125 Prozent steht einer Benchmark-Nettorendite von rund 4,0 Prozent für Immobilien des täglichen Bedarfs an B-Lagen gegenüber. Das heisst für Sie: Die Risikoprämie für systemrelevante Verkaufsflächen bleibt attraktiv; sichern Sie die Finanzierung für Supermarkt-Immobilien langfristig ab.</p>
+            <p>Einordnung: Der Swap von 0,6125 Prozent steht einer Benchmark-Nettorendite von rund 4,0 Prozent für Immobilien des täglichen Bedarfs (Verkauf/Detailhandel) an B-Lagen gegenüber. Das heisst für Sie: Die Risikoprämie für systemrelevante Verkaufsflächen bleibt attraktiv; sichern Sie die Finanzierung für Supermarkt-Immobilien in Agglomerationen langfristig ab.</p>
             
             <details class="probeausgabe">
                 <summary>Vollständige Ausgabe lesen</summary>
                 <div class="probe-content">
                     <h4>SCHWERPUNKT: Die Warnung vor Kreditausfällen</h4>
-                    <p>Der Verwaltungsratspräsident der Partners Group rechnet mit einer Verdoppelung der Ausfallraten im privaten Kreditmarkt durch den Wandel der KI. Das heisst für Sie: Alternative Finanzierungen bergen steigende Risiken; refinanzieren Sie Portfolios bevorzugt über traditionelle Bankdarlehen. [Quelle: FT / Partners Group]</p>
+                    <p>Der Verwaltungsratspräsident der Partners Group rechnet mit einer Verdoppelung der Ausfallraten im privaten Kreditmarkt durch den Wandel der künstlichen Intelligenz; während Institutionen wie die Deutsche Bank ihr Angebot in diesem unregulierten Segment ausbauen. Das heisst für Sie: Alternative Finanzierungen bergen steigende Ausfallrisiken; refinanzieren Sie Ihre Immobilienportfolios bevorzugt über traditionelle Bankdarlehen. [Quelle: Financial Times / Partners Group]</p>
                     
                     <h4>IMMOBILIEN</h4>
-                    <p><strong>Kostendruck:</strong> Schweizer Familien sorgen sich um Krankenkassenprämien. Budgets schrumpfen; stoppen Sie hochpreisige Familienwohnungen im mittleren Segment. [Quelle: Pro Familia]</p>
-                    <p><strong>Verzögerter Auszug:</strong> Die Hälfte der 25-Jährigen bleibt im Elternhaus. Nachfrage nach Erstwohnungen sinkt; reduzieren Sie kleine Studios. [Quelle: Tagi]</p>
-                    <p><strong>Qualität:</strong> Bevölkerung fordert Ästhetik vor Lärmschutz. Erhöhen Sie Planungsbudgets bei Grossprojekten zur Vermeidung von Blockaden. [Quelle: Umfragen]</p>
-                    <p><strong>Kameras:</strong> Zürich vereinfacht Videoüberwachung. Hürden für Gebäudeschutz sinken; rüsten Sie Geschäftshäuser konsequent auf. [Quelle: Gemeinderat]</p>
-                    <p><strong>Robotaxis:</strong> Lucid und Nissan rollen autonome Flotten aus. Parkplatzbedarf sinkt; wandeln Sie Parkhäuser in Logistikflächen um. [Quelle: Lucid]</p>
+                    <p><strong>Der Kostendruck der Familien:</strong> Steigende Krankenkassenprämien und Preise bilden die Hauptsorge der Schweizer Familien und dämpfen die finanziellen Zukunftserwartungen. Plattformbetreiber und Schulen sollen bei der Medienerziehung von Kindern unterstützen. Das heisst für Sie: Die Budgets der Privathaushalte schrumpfen; stoppen Sie die Entwicklung von hochpreisigen Familienwohnungen im mittleren Segment. [Quelle: Pro Familia Schweiz und Pax: Familienbarometer]</p>
+                    <p><strong>Die Verzögerung des Auszugs:</strong> Die Hälfte der 25-Jährigen verbleibt im Elternhaus, getrieben durch tiefe Leerstände auf dem Wohnungsmarkt und veränderte familiäre Bindungen. Das heisst für Sie: Die Nachfrage nach Erstwohnungen für junge Erwachsene geht zurück; reduzieren Sie den Anteil an kleinen Studios in Ihren Neubauprojekten. [Quelle: Forschungserhebungen und Tages-Anzeiger]</p>
+                    <p><strong>Die Qualität der Verdichtung:</strong> Die Bevölkerung verlangt bei der städtebaulichen Verdichtung primär architektonische Qualität vor dem Erhalt von Grünräumen oder Lärmschutz. Das heisst für Sie: Ästhetik verhindert politische Blockaden; erhöhen Sie die Planungsbudgets bei städtischen Grossprojekten. [Quelle: Umfragedaten]</p>
+                    <p><strong>Die Regeln für Kameras:</strong> Der Zürcher Gemeinderat vereinfacht das Meldeverfahren für die private Videoüberwachung von Liegenschaften auf öffentlichem Grund. Das heisst für Sie: Die juristischen Hürden für den Gebäudeschutz sinken; rüsten Sie die Aussenbereiche Ihrer städtischen Geschäftshäuser konsequent mit Kameras auf. [Quelle: Gemeinderat]</p>
+                    <p><strong>Die Skalierung der Robotaxis:</strong> Automobilhersteller wie Lucid und Nissan lancieren vollautonome Fahrzeuge und rollen diese mit Uber in ersten Metropolen wie Tokio aus. Das heisst für Sie: Der Bedarf für individuelle Parkplätze in Innenstädten sinkt rasant; wandeln Sie unterirdische Parkhäuser rechtzeitig in städtische Logistikflächen um und bewirtschaften sie aktiv mit Share-Konzepten. [Quelle: Lucid, Nissan]</p>
                     
                     <h4>GLOBAL</h4>
-                    <p><strong>Krieg:</strong> US-Armee nutzt Palantir und Anthropic für KI-Militärschläge. Rüstung und Tech verschmelzen; bieten Sie Software-Unternehmen gesicherte Flächen an. [Quelle: Colossus]</p>
-                    <p><strong>Auto:</strong> Honda verbucht Rekordverlust. Zulieferer unter Druck; verlangen Sie von Mietern aus diesem Sektor erhöhte Kautionen. [Quelle: Handelsblatt]</p>
+                    <p><strong>Die Automatisierung des Krieges:</strong> Die US-Armee nutzt Systeme von Palantir und Anthropic für die Steuerung von militärischen Schlägen durch künstliche Intelligenz. Das heisst für Sie: Rüstung und Technologie verschmelzen zu einem Sektor; offerieren Sie diesen hochkapitalisierten Software-Unternehmen gesicherte Büroflächen. [Quelle: Colossus, Invest like the Best-Podcast]</p>
+                    <p><strong>Der Einbruch der Automobilindustrie:</strong> Honda verbucht den ersten Jahresverlust seit siebzig Jahren, während europäische Konsumenten den Kauf von Fahrzeugen hinauszögern. Das heisst für Sie: Die Automobilzulieferer geraten unter existenziellen Druck; verlangen Sie von Mietern aus diesem Sektor ab sofort erhöhte Mietkautionen. [Quelle: Handelsblatt]</p>
                     
-                    <h4>ENERGIE: Die Blockade des Öls</h4>
-                    <p>Iran droht mit Schliessung der Strasse von Hormus. Ölpreis über 100 Dollar. Zwingen Sie GU zur Fixierung von Materialpreisen. [Quelle: IEA]</p>
+                    <h4>ENERGIE</h4>
+                    <p><strong>Die Blockade des Öls:</strong> Der Iran ruft zur Schliessung der Strasse von Hormus auf, treibt den Ölpreis über 100 Dollar und verursacht historische Störungen der Versorgungslinien. Das heisst für Sie: Die globalen Transportkosten eskalieren; zwingen Sie Ihre Generalunternehmer zur sofortigen Fixierung der Materialpreise für laufende Bauten. [Quelle: IEA]</p>
                     
-                    <h4>KÖRPER & GEIST: Die Illusion der Stehpulte</h4>
-                    <p>Permanentes Stehen erhöht Venenleiden auf 83%. Stehpulte schützen nicht allein; erzwingen Sie Bewegung durch dezentrale Grundrisse. [Quelle: Taylor & Francis]</p>
+                    <h4>KÖRPER & GEIST</h4>
+                    <p><strong>Die Illusion der Stehpulte:</strong> Permanentes Stehen am Arbeitsplatz erhöht die Prävalenz für chronische Venenleiden auf 83 Prozent und übertrifft damit die Schäden des reinen Sitzens. Das heisst für Sie: Höhenverstellbare Tische schützen die Arbeitskraft Ihrer gewerblichen Mieter nicht in allen Fällen; erzwingen Sie die physische Zirkulation der Belegschaft zwingend durch dezentrale Grundrisse. [Quelle: Taylor & Francis]</p>
                     
                     <h4>WORLDLY WISDOM</h4>
-                    <p><em>Charlie: “Acknowledging what you don’t know is the dawning of wisdom.”</em> [Poor Charlie’s Almanack]</p>
+                    <p><em>Charlie: “Acknowledging what you don’t know is the dawning of wisdom.”</em><br>[Quelle: Poor Charlie’s Almanack: The Essential Wit and Wisdom of Charles T. Munger]</p>
                 </div>
             </details>
         </div>
@@ -205,63 +209,135 @@
             <h3>Wir filtern den Lärm.</h3>
             <p>Ein Entscheidungsträger hat keine Zeit für mediales Rauschen. Wir scannen täglich hunderte Publikationen und destillieren das strategische Extrakt.</p>
             <h3>Wir liefern Kontext.</h3>
-            <p>Eine Zinsänderung ist im Vakuum lediglich eine isolierte Zahl. Wir erklären präzise, was diese Verschiebung für Ihre Immobilienrendite und Ihre Kapitalkosten bedeutet.</p>
+            <p>Eine Zinsänderung ist im Vakuum lediglich eine isolierte Zahl. Wir erklären präzise, was diese Verschiebung für Ihre Immobilienrendite und Ihre Kapitalkosten bedeutet. Jeder globale Datenpunkt wird mit chirurgischer Präzision in eine direkte Handlungskonsequenz für Ihre Kapitalallokation übersetzt.</p>
             <h3>Wir sprechen Klartext.</h3>
-            <p>Qualität entsteht durch radikalen Verzicht. Kein Jargon, keine Adjektive, keine Spekulation. Wir publizieren ausschliesslich Fakten und deren Konsequenzen.</p>
+            <p>Qualität entsteht in dieser Redaktion durch radikalen Verzicht. Kein Jargon, keine Adjektive, keine spekulativen Prognosen und keine Werbeflächen. Wir publizieren ausschliesslich Fakten und deren Konsequenzen.</p>
+            <h3>Wir versprechen Kante.</h3>
+            <p>Das Mandat ist das Resultat einer kompromisslosen Suche nach der substanziellen Wahrheit hinter den täglichen Marktbewegungen. Die höchste Währung dieser Dienstleistung ist Ihre gesparte Zeit. Die Chefredaktion ordnet die Weltlage mit leiser Autorität exklusiv für jene ein, die das Kapital steuern und die finalen Entscheidungen treffen.</p>
+        </section>
+        
+        <section id="herausgeber">
+            <h2>DER HERAUSGEBER</h2>
+            <h3>Die Interessenkongruenz.</h3>
+            <p>Marc Locher verantwortet die redaktionelle Architektur des MORNING ESPRESSO. Er agiert als strategischer Berater für institutionelles Kapital. Die Publikation verzichtet auf jegliche Transaktionsanreize. Dienen kommt zwingend vor dem Verkaufen. Das primäre Ziel der Analyse ist der langfristige Erhalt Ihres Portfolios.</p>
+            <h3>Das analytische Raster.</h3>
+            <p>Die Weltlage wird durch ein interdisziplinäres Gitterwerk mentaler Modelle dechiffriert. Jede These durchläuft die systematische Antizipation des kritischen Gegenarguments. Ein Datenpunkt wird erst publiziert, wenn er den Stresstest des schlechtestmöglichen Szenarios übersteht. Diese kompromisslose Suche nach Schwachstellen schützt Ihr Kapital vor den blinden Flecken des Marktes.</p>
+            <h3>Das System der Konstanz.</h3>
+            <p>Kontinuität schlägt Intensität. Die Redaktion operiert als geschlossenes System, das emotionale Verzerrungen und publizistischen Lärm durch eiserne Routinen eliminiert. Diese funktionale Exzellenz ist kein Selbstzweck. Sie garantiert ein einziges Resultat. Das Briefing erreicht Sie mit absoluter Verlässlichkeit jeden Morgen bis 06:30 Uhr.</p>
+        </section>
+
+        <section id="diskurs">
+            <h2>DER STRATEGISCHE DISKURS</h2>
+            <h3>Der intellektuelle Stresstest.</h3>
+            <p>Die Redaktion fordert den intellektuellen Stresstest. Wir laden unsere Mandanten zum direkten, unzensierten Austausch ein. Jede geteilte Marktexpertise und jede strategische Gegenposition kalibriert unsere künftigen Analysen. Wir publizieren keine unantastbaren Dogmen. Wir suchen die Reibung mit der Realität Ihres Portfolios.</p>
+            <h3>Die Chatham House Rule.</h3>
+            <p>Dieser Diskurs unterliegt kompromisslos der Chatham House Rule. Wir werten Ihre Fakten aus, aber wir trennen sie strikt von Ihrer Person. Ihre Identität und Ihre institutionelle Zugehörigkeit bleiben absolut geschützt. Diese radikale Anonymität eliminiert das Reputationsrisiko und zwingt zur intellektuellen Ehrlichkeit.</p>
+            <h3>Die asymmetrische Information.</h3>
+            <p>Wir tauschen asymmetrisches Marktwissen gegen garantierte Diskretion. Dieses Prinzip verwandelt die Publikation in einen diskreten Kreis aktiver Entscheider. Der Informationsvorteil des Einzelnen wird durch unsere Kuration zum Schutzschild für das Kollektiv. Senden Sie Ihre Positionen direkt an die Chefredaktion: mail@morning-espresso.net.</p>
         </section>
 
         <section id="angebot">
             <h2>DAS ANGEBOT</h2>
+            <p>Die Mandatszeichnung. Qualität ist das Resultat von Fokus und Verzicht. Der Zugang zum MORNING ESPRESSO erfolgt ausschliesslich über ein geschlossenes, kostenpflichtiges Mandat. Wir dienen jenen, die Kapital steuern und finale Entscheidungen treffen. Ab dem 15. März 2026 tun wir dies exklusiv für unsere Mandanten.</p>
+
             <div class="box">
                 <h3>Probezeit. CHF 0.00.</h3>
-                <p>10 Ausgaben (14 Tage) zum Kennenlernen. Die Belieferung endet automatisch.</p>
-                <form action="mailto:mail@morning-espresso.net" method="post" enctype="text/plain" class="subscription-form">
-                    <input type="text" name="Vorname" placeholder="Vorname" required>
-                    <input type="text" name="Nachname" placeholder="Nachname" required>
-                    <input type="email" name="Email" placeholder="E-Mail Adresse" required>
+                <p>Zum Kennenlernen der redaktionellen Tiefe. Sie erhalten den vollen MORNING ESPRESSO über 10 Ausgaben (14 Tage). Die Belieferung endet danach automatisch; es erfolgt keine automatische Verlängerung.</p>
+                <form onsubmit="sendTrialEmail(event)" class="subscription-form">
+                    <input type="text" id="fname" placeholder="Vorname" required>
+                    <input type="text" id="lname" placeholder="Nachname" required>
+                    <input type="email" id="mail" placeholder="E-Mail Adresse" required>
                     <button type="submit" class="button mocha">JETZT TESTEN</button>
                 </form>
+                <script>
+                    function sendTrialEmail(event) {
+                        event.preventDefault();
+                        var fname = document.getElementById('fname').value;
+                        var lname = document.getElementById('lname').value;
+                        var mail = document.getElementById('mail').value;
+
+                        var subject = encodeURIComponent("Mandatszeichnung: Probeausgabe MORNING ESPRESSO");
+                        var body = encodeURIComponent(
+                            "Guten Tag\n\n" +
+                            "Bitte schalten Sie meinen 14-tägigen Zugang für das strategische Briefing frei. Meine Koordinaten:\n\n" +
+                            "Vorname: " + fname + "\n" +
+                            "Nachname: " + lname + "\n" +
+                            "E-Mail: " + mail + "\n\n" +
+                            "Freundliche Grüsse\n" + fname + " " + lname
+                        );
+                        window.location.href = "mailto:mail@morning-espresso.net?subject=" + subject + "&body=" + body;
+                    }
+                </script>
             </div>
+
             <div class="box">
                 <h3>Einzelabonnement. CHF 19.90 / Monat.</h3>
-                <a href="https://buy.stripe.com/bJe9AT4rSg7t0xXdMjcwg00" class="button mocha" target="_blank">MANDAT ERTEILEN</a>
+                <p>Für den einzelnen Entscheider. Sie erhalten das tägliche Briefing von Montag bis Freitag direkt per E-Mail. Das Mandat ist monatlich kündbar.</p>
+                <a href="https://buy.stripe.com/bJe9AT4rSg7t0xXdMjcwg00" class="button mocha" target="_blank" rel="noopener noreferrer">MANDAT ERTEILEN</a>
             </div>
+
             <div class="box">
                 <h3>Firmenabonnement. CHF 59.90 / Monat.</h3>
-                <a href="https://buy.stripe.com/6oU9ATf6w1cza8x37Fcwg01" class="button mocha" target="_blank">FIRMENZUGANG</a>
+                <p>Für Investment-Teams, Geschäftsleitungen oder Verwaltungsräte. Das Paket umfasst bis zu 5 Lizenzen. Die Abrechnung erfolgt auf Wunsch bequem per Rechnung.</p>
+                <a href="https://buy.stripe.com/6oU9ATf6w1cza8x37Fcwg01" class="button mocha" target="_blank" rel="noopener noreferrer">FIRMENZUGANG</a>
             </div>
         </section>
 
-        <section id="herausgeber">
-            <h2>DER HERAUSGEBER</h2>
-            <p>Marc Locher verantwortet die redaktionelle Architektur. Er agiert als strategischer Berater für institutionelles Kapital. Dienen kommt zwingend vor dem Verkaufen.</p>
-        </section>
-        
-        <section id="diskurs">
-            <h2>STRATEGISCHER DISKURS</h2>
-            <p>Wir tauschen asymmetrisches Marktwissen gegen garantierte Diskretion (Chatham House Rule). Senden Sie Ihre Positionen direkt an: mail@morning-espresso.net.</p>
+        <section id="faq">
+            <h2>Häufige Fragen</h2>
+            <h3>In welchen Sprachen erscheint der MORNING ESPRESSO?</h3>
+            <p>Sie wählen nach der Anmeldung Ihre Präferenz zwischen Deutsch, Französisch oder Englisch. Jede Ausgabe wird täglich frisch übersetzt, um die präzise strategische Einordnung in Ihrer Arbeitssprache zu garantieren.</p>
+            <h3>Wie funktioniert die Probezeit?</h3>
+            <p>Für das Kennenlernen hinterlegen Sie ausschliesslich Ihre E-Mail-Adresse. Sie beziehen den MORNING ESPRESSO für 14 Tage. Danach endet die Belieferung automatisch, ohne dass eine Kündigung Ihrerseits erforderlich ist. Es existiert keine Abonnement-Falle und keine versteckte Verlängerung.</p>
+            <h3>Wie wird das Firmenabonnement verwaltet?</h3>
+            <p>Dieses Mandat ist für Geschäftsleitungen, Verwaltungsräte oder Investment-Teams konzipiert. Der Hauptnutzer kann bis zu vier namentlich registrierte Entscheidungsträger per E-Mail-Einladung hinzufügen. Firmenkunden erhalten auf Wunsch eine ordentliche Rechnung anstelle einer Kreditkartenbelastung.</p>
+            <h3>Wie sind die Kündigungsmodalitäten?</h3>
+            <p>Transparenz ist die Basis unseres Vertrauens. Sie können Ihr Mandat jederzeit mit einem Klick in der Fusszeile jeder E-Mail oder direkt in Ihrem Kundenkonto beenden. Die Kündigung wird sofort wirksam. Eine anteilige Rückerstattung der Gebühr für den bereits fakturierten, laufenden Monat ist jedoch ausgeschlossen.</p>
+            <h3>Wie sicher sind meine Daten?</h3>
+            <p>Wir verzichten konsequent auf Werbenetzwerke und Tracking-Mechanismen. Ihre Daten werden ausschliesslich für die Zustellung und die buchhalterische Abwicklung verwendet. Die Infrastruktur unterliegt vollumfänglich dem Schweizer Datenschutzrecht.</p>
         </section>
     </main>
 
     <footer>
         <details class="footer-details">
+            <summary>RECHTLICHER RAHMEN & URHEBERRECHT</summary>
+            <div class="footer-content">
+                <p>Der MORNING ESPRESSO publiziert unabhängige strategische Einordnungen der Weltlage für institutionelle Investoren. Diese redaktionelle Dienstleistung konstituiert ausdrücklich keine Anlageberatung im Sinne der schweizerischen Finanzmarktgesetzgebung. Die Meleven AG schliesst jegliche Haftung für Investitionsentscheide, welche aus der Nutzung dieser Datenpunkte abgeleitet werden, vollumfänglich aus. Sämtliche publizierten Texte, strukturellen Analysen und Konzepte unterliegen dem Schweizer Urheberrecht. Die unautorisierte Vervielfältigung, systematische Speicherung oder kommerzielle Weitergabe an Dritte ausserhalb der lizenzierten Mandate ist untersagt und wird rechtlich verfolgt.</p>
+            </div>
+        </details>
+        
+        <details class="footer-details">
             <summary>PUBLIZISTISCHE DOKTRIN</summary>
             <div class="footer-content">
-                <p>Die Integrität des MORNING ESPRESSO unterliegt einem Regelwerk der Wahrheitsfindung und journalistischen Unabhängigkeit. Wir trennen Daten strikt von strategischer Einordnung. Wir lehnen Werbung und Sponsoring kategorisch ab.</p>
+                <p>Die publizistische Integrität des MORNING ESPRESSO unterliegt einem kompromisslosen Regelwerk, welches die internationalen Standards der Wahrheitsfindung und der journalistischen Unabhängigkeit exekutiert. Die Redaktion verpflichtet sich der radikalen Faktentreue und trennt objektive Datenpunkte strikt von der strategischen Einordnung für das institutionelle Kapital. Die ökonomische Unabhängigkeit bildet das Fundament der redaktionellen Glaubwürdigkeit. Die Publikation lehnt jegliche Form von Werbeeinnahmen, Sponsoring oder verdeckten Zuwendungen kategorisch ab, um die Anreizstrukturen ausschliesslich auf den intellektuellen Mehrwert für die lizenzierten Mandanten auszurichten. Die Beschaffung und Verifikation von Informationen erfolgt durch die rigorose Prüfung von Primärquellen, wobei die absolute Vertraulichkeit von diskreten Informanten unter dem Schutz des professionellen Quellenschutzes unangetastet bleibt. Fehler in der Kuration oder Interpretation von Daten werden nicht verschleiert, sondern umgehend und transparent im Sinne einer kontinuierlichen Systemoptimierung korrigiert. Die Redaktion verweigert sich dem spekulativen Journalismus, der algorithmischen Reichweitenmaximierung und der Verbreitung von Gerüchten. Jeder publizierte Satz muss den Stresstest des kritischen Gegenarguments bestehen und der substanziellen Wahrheit hinter den geopolitischen Kulissen dienen. Die Wahrung der Würde und der Persönlichkeitsrechte aller Akteure bleibt ein unverrückbares Prinzip, welches durch leise Autorität und den konsequenten Verzicht auf mediale Skandalisierung durchgesetzt wird. Dieses Mandat dient ausschliesslich der Aufklärung und der Schaffung von Klarheit durch den systematischen Verzicht auf publizistisches Rauschen.</p>
             </div>
         </details>
 
         <details class="footer-details">
             <summary>QUELLENSCHUTZ</summary>
             <div class="footer-content">
-                <p>Wir wenden konsequent die Chatham House Rule an. Dies garantiert die absolute Geheimhaltung der Identität unserer Informanten und erzwingt radikale intellektuelle Ehrlichkeit.</p>
+                <p>Die Redaktion des MORNING ESPRESSO operiert auf der Basis einer binären Informationsarchitektur, welche die Verifikation von Makrodaten mit der exklusiven Beschaffung von asymmetrischem Marktwissen vereint. Offizielle Verlautbarungen, statistische Erhebungen und institutionelle Forschungsarbeiten unterliegen der uneingeschränkten, namentlichen Zitationstransparenz. Diese strikte Attribution garantiert die juristische und ökonomische Nachvollziehbarkeit jedes publizierten Datenpunktes für die strategische Kapitalallokation der Mandanten. Im direkten Austausch mit Entscheidungsträgern, Regulatoren und Marktteilnehmern wendet die Redaktion konsequent die Chatham House Rule an. Diese international etablierte Konvention berechtigt die Publikation zur uneingeschränkten Verwertung der geteilten Fakten und strategischen Einschätzungen, verbietet jedoch absolut die Offenlegung der Identität oder der institutionellen Zugehörigkeit des Informanten. Diese garantierte Geheimhaltung eliminiert die Anreizstrukturen der klassischen Unternehmenskommunikation und schützt den Informanten vor rechtlichen oder ökonomischen Repressalien. Die Gewährung der absoluten Anonymität zwingt die Quellen zur radikalen intellektuellen Ehrlichkeit. Dies gewährt den lizenzierten Mandanten den direkten Zugang zur substanziellen Wahrheit hinter den offiziellen Transaktionskulissen. Die Chefredaktion übernimmt die juristische und publizistische Alleinverantwortung für die Validität dieser diskret beschafften Erkenntnisse. Jeder anonymisierte Datenpunkt durchläuft vor der Publikation zwingend den Stresstest des kritischen Gegenarguments, um jegliche gezielte Desinformation durch interessengesteuerte Marktteilnehmer auszuschliessen.</p>
+            </div>
+        </details>
+        
+        <details class="footer-details">
+            <summary>IMPRESSUM</summary>
+            <div class="footer-content">
+                <p>Die presserechtliche und unternehmerische Verantwortung für den Betrieb der Plattform MORNING ESPRESSO sowie für sämtliche publizierten Inhalte trägt die Meleven AG. Marc Locher zeichnet als Chefredaktor verantwortlich. Der juristische und physische Sitz der Gesellschaft befindet sich an der Gehrenstrasse 10 in 8512 Thundorf in der Schweiz. Für die unmittelbare Kontaktaufnahme stehen den Mandanten und Behörden die elektronische Adresse mail@morning-espresso.net sowie die direkte Rufnummer +41 79 930 03 28 zur Verfügung. Das redaktionelle Mandat liefert ausschliesslich unabhängige strategische Einordnungen und stellt ausdrücklich keine finanzielle Anlageberatung im Sinne der schweizerischen Finanzmarktgesetzgebung dar. Die Meleven AG schliesst jegliche juristische Haftung für materielle oder immaterielle Schäden, welche aus der direkten oder indirekten Nutzung der dargebotenen Informationen und Datenpunkte resultieren, vollumfänglich aus. Sämtliche Texte, strukturellen Analysen und publizistischen Konzepte des MORNING ESPRESSO unterliegen dem schweizerischen Urheberrecht. Jede unautorisierte Vervielfältigung, systematische Weiterverbreitung oder kommerzielle Nutzung durch Dritte ausserhalb der lizenzierten Firmen- oder Einzelabonnements ist strikt untersagt und wird rechtlich verfolgt.</p>
+            </div>
+        </details>
+        
+        <details class="footer-details">
+            <summary>DATENSCHUTZ</summary>
+            <div class="footer-content">
+                <p>Die juristische Verantwortung für die Datenverarbeitung trägt die Meleven AG mit Sitz an der Gehrenstrasse 10 in Thundorf. Die Erhebung personenbezogener Daten wird auf das absolute Minimum reduziert und dient ausschliesslich der Erfüllung des redaktionellen Mandats sowie der korrekten buchhalterischen Abwicklung. Es werden lediglich die Identität, die Kontaktkoordinaten und die Zahlungsdetails der lizenzierten Mandanten erfasst. Die Meleven AG monetarisiert keine Nutzerdaten, speist diese in keine externen Werbenetzwerke ein und verzichtet konsequent auf verdeckte analytische Tracking-Mechanismen. Sämtliche Datenpunkte unterliegen der strikten Vertraulichkeit und werden durch modernste technische Dispositive vor unautorisiertem Zugriff geschützt. Die Mandanten behalten jederzeit die vollumfängliche Souveränität über ihre Daten und können deren Berichtigung, Herausgabe oder vollständige Löschung unter der Adresse mail@morning-espresso.net bedingungslos einfordern, solange keine übergeordneten gesetzlichen Aufbewahrungsfristen des Schweizer Obligationenrechts tangiert werden. Diese restriktive Datenarchitektur untersteht ausnahmslos dem revidierten Bundesgesetz über den Datenschutz der Schweiz.</p>
             </div>
         </details>
 
         <details class="footer-details">
             <summary>ALLGEMEINE GESCHÄFTSBEDINGUNGEN</summary>
             <div class="footer-content">
-                <p>Vertragsschluss ab 15. März 2026. Mandate sind monatlich kündbar. Gerichtsstand ist Frauenfeld. Es gilt Schweizer Recht. Die Dienstleistung stellt keine Anlageberatung dar. Jegliche Haftung wird ausgeschlossen.</p>
+                <p>Diese Allgemeinen Geschäftsbedingungen regeln das vertragliche Verhältnis zwischen der Meleven AG mit Sitz in Thundorf und den Beziehern des exklusiven redaktionellen Mandats. Der juristische Vertragsabschluss erfolgt durch die digitale Zeichnung der Dienstleistung ab dem 15. März 2026. Das Einzelabonnement berechtigt eine definierte physische Person zum täglichen Bezug der Publikation gegen eine monatliche Gebühr von 19.90 Schweizer Franken. Das Firmenabonnement gewährt den identischen Zugang für bis zu fünf namentlich registrierte Entscheidungsträger zum monatlichen Tarif von 59.90 Schweizer Franken. Die Fakturierung erfolgt jeweils vorschüssig. Die Rechnungsbeträge werden innert zehn Tagen nach Rechnungsstellung ohne Abzüge zur Zahlung fällig. Die publizistische Wertschöpfung des MORNING ESPRESSO unterliegt vollumfänglich dem Schutz des schweizerischen Urheberrechts. Jede systematische Vervielfältigung, das unautorisierte Weiterleiten an nicht lizenzierte Dritte oder die anderweitige kommerzielle Verwertung der kuratierten Inhalte stellt eine fundamentale Vertragsverletzung dar. Ein solches Vorgehen zwingt die Meleven AG zur sofortigen Auflösung des Mandats ohne Anspruch auf Rückerstattung bereits geleisteter Zahlungen und zieht zwingend zivilrechtliche Schritte nach sich. Die Publikation liefert eine unabhängige strategische Einordnung der geopolitischen und makroökonomischen Weltlage für institutionelle Immobilien-Investoren. Diese Informationsaufbereitung konstituiert unter keinen Umständen eine formelle Finanz-, Rechts- oder Anlageberatung im Sinne der schweizerischen Finanzmarktgesetzgebung. Die Meleven AG schliesst jegliche juristische Haftung für materielle oder immaterielle Schäden sowie für strategische Fehlentscheidungen, welche aus der direkten oder indirekten Nutzung der dargebotenen Datenpunkte abgeleitet werden, kategorisch aus. Das redaktionelle Mandat kann von beiden Vertragsparteien jederzeit gekündigt werden. Die Beendigung wird per sofort wirksam. Eine anteilige Rückerstattung der Gebühr für den bereits fakturierten, laufenden Monat ist explizit ausgeschlossen. Als ausschliesslicher Gerichtsstand für sämtliche Streitigkeiten aus diesem Vertragsverhältnis wird Frauenfeld vereinbart. Es gelangt explizit und ausschliesslich materielles Schweizer Recht zur Anwendung.</p>
             </div>
         </details>
 
@@ -269,7 +345,7 @@
             <p><strong>HERAUSGEBER & REDAKTION</strong><br>
             Meleven AG | MORNING ESPRESSO. Chefredaktor: Marc Locher. Gehrenstrasse 10 | 8512 Thundorf | Schweiz.<br>
             +41 79 930 03 28 | mail@morning-espresso.net.</p>
-            <p>© 2026 Meleven AG. Stand Do. 05. März 2026 ML</p>
+            <p>© 2026 Meleven AG. Stand Sa. 14. März 2026 ML</p>
         </div>
     </footer>
 
