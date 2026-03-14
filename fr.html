@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MORNING ESPRESSO - Le discernement plutôt que l'actualité</title>
+    <style>
+        :root {
+            --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            --color-bg: #ffffff;
+            --color-text: #000000;
+            --color-mocha: #4A3018; 
+            --color-fir: #2E3B23; 
+        }
+        
+        body {
+            font-family: var(--font-sans);
+            font-size: 18px;
+            line-height: 1.6;
+            color: var(--color-text);
+            background-color: var(--color-bg);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            text-rendering: optimizeLegibility;
+        }
+
+        /* Sprachnavigation */
+        .language-nav {
+            text-align: right;
+            margin-bottom: 40px;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .language-nav a {
+            color: var(--color-text);
+            text-decoration: none;
+            margin-left: 15px;
+        }
+        .language-nav a.active {
+            font-weight: 900;
+            border-bottom: 3px solid var(--color-text);
+        }
+
+        /* Massive Typografie */
+        .site-title {
+            font-size: 64px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: -3px;
+            margin: 0 0 10px 0;
+            line-height: 0.85;
+        }
+
+        h2.main-headline { 
+            font-size: 42px; 
+            font-weight: 900;
+            line-height: 1.1;
+            margin: 20px 0;
+            letter-spacing: -1px;
+        }
+
+        .fokus-sentence { 
+            font-size: 32px; 
+            font-weight: 800; 
+            line-height: 1.2; 
+            margin-bottom: 30px;
+            letter-spacing: -1px;
+            hyphens: auto;
+            -webkit-hyphens: auto;
+        }
+
+        h2 { 
+            font-size: 32px; 
+            font-weight: 900;
+            margin: 60px 0 20px 0; 
+            border-bottom: 2px solid var(--color-fir); 
+            padding-bottom: 10px; 
+            text-transform: uppercase;
+        }
+
+        h3 { font-size: 24px; font-weight: 800; margin: 30px 0 10px 0; }
+        h4 { font-size: 20px; font-weight: 700; margin: 25px 0 5px 0; text-transform: uppercase; color: var(--color-mocha); }
+        
+        p { 
+            margin: 0 0 20px 0; 
+            hyphens: auto;
+            -webkit-hyphens: auto;
+        }
+        
+        /* Probeausgabe Box */
+        .probe-box {
+            border: 2px solid var(--color-mocha);
+            padding: 30px;
+            margin: 40px 0;
+            background-color: #faf9f8;
+        }
+        .sample-notice {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #666;
+            margin-bottom: 20px;
+            display: block;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+        
+        details.probeausgabe summary {
+            font-weight: 900;
+            font-size: 16px;
+            color: var(--color-bg);
+            background-color: var(--color-mocha);
+            padding: 15px 30px;
+            outline: none;
+            cursor: pointer;
+            display: inline-block;
+            margin-top: 20px;
+            text-transform: uppercase;
+        }
+        .probe-content {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid var(--color-fir);
+        }
+
+        .box { border: 1px solid var(--color-mocha); padding: 30px; margin-bottom: 30px; }
+        
+        .button {
+            display: inline-block;
+            background-color: var(--color-text);
+            color: var(--color-bg);
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-top: 15px;
+            border: 2px solid var(--color-text);
+            cursor: pointer;
+        }
+        .button.mocha { background-color: var(--color-mocha); border-color: var(--color-mocha); }
+        .button:hover { background-color: var(--color-bg); color: var(--color-text); }
+        .button.mocha:hover { background-color: var(--color-bg); color: var(--color-mocha); }
+
+        .subscription-form { display: flex; flex-direction: column; gap: 15px; margin-top: 20px; max-width: 400px; }
+        .subscription-form input { padding: 12px; font-family: var(--font-sans); font-size: 16px; border: 1px solid #ccc; outline: none; }
+        .subscription-form input:focus { border-color: var(--color-mocha); }
+
+        footer { margin-top: 80px; padding-top: 40px; border-top: 3px solid var(--color-text); }
+        .impressum { font-size: 16px; color: #000; margin-bottom: 40px; }
+        
+        .legal-menu { border-top: 1px solid var(--color-fir); }
+        .footer-details { border-bottom: 1px solid var(--color-fir); }
+        .footer-details summary { 
+            font-weight: 900; 
+            font-size: 16px; 
+            padding: 20px 0; 
+            cursor: pointer; 
+            text-transform: uppercase; 
+            list-style: none; 
+            display: flex; 
+            justify-content: space-between; 
+        }
+        .footer-details summary::-webkit-details-marker { display: none; }
+        .footer-details summary::after { content: "+"; }
+        .footer-details[open] summary::after { content: "-"; }
+        .footer-content { 
+            font-size: 14px; 
+            padding-bottom: 30px; 
+            color: #333; 
+            text-align: justify; 
+            hyphens: auto;
+            -webkit-hyphens: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="language-nav">
+        <a href="index.html">DE</a>
+        <a href="en.html">EN</a>
+        <a href="fr.html" class="active">FR</a>
+    </nav>
+
+    <header>
+        <div class="site-title">MORNING ESPRESSO</div>
+        <h2 class="main-headline">Le discernement plutôt que l'actualité.</h2>
+        <p class="fokus-sentence">Le briefing quotidien des décideurs.<br>Sans publicité. Fondé sur les données. Stratégique.</p>
+        <p>Chaque matin avant 6h30 : l'analyse précise de la situation mondiale pour votre portefeuille.</p>
+        
+        <div class="probe-box">
+            <span class="sample-notice">Modèle d'une édition d'essai (Archive)</span>
+            <p><strong>ARGENT & TAUX</strong></p>
+            <p>11.03.2026: SARON: -0,05% [- 1 bp]<br>
+            12.03.2026: Confédération (10 j): 0.421% [- 1 bp]<br>
+            Swap (10 j): 0,6125 % [inchangé]</p>
+            <p><em>Analyse:</em> Le swap de 0,6125 % correspond à un rendement net de référence d'environ 4,0 % pour l'immobilier de première nécessité dans les emplacements de type B. Pour vous, cela signifie : la prime de risque pour les surfaces de vente d'importance systémique reste attractive ; sécurisez le financement à long terme de vos supermarchés en agglomération.</p>
+            
+            <details class="probeausgabe">
+                <summary>Lire l'édition complète</summary>
+                <div class="probe-content">
+                    <h4>POINT FORT: L'alerte sur les défauts de crédit</h4>
+                    <p>Le président du conseil d'administration de Partners Group prévoit un doublement des taux de défaut sur le marché du crédit privé en raison de la transformation par l'IA. Cela signifie pour vous : les financements alternatifs comportent des risques croissants ; refinancez vos portefeuilles immobiliers de préférence par des prêts bancaires traditionnels. [Source: FT / Partners Group]</p>
+                    
+                    <h4>IMMOBILIER</h4>
+                    <p><strong>Pression sur les coûts :</strong> Les familles suisses s'inquiètent de la hausse des primes d'assurance maladie. Les budgets se contractent ; stoppez le développement de logements familiaux onéreux dans le segment moyen. [Source: Pro Familia]</p>
+                    <p><strong>Départ différé :</strong> La moitié des jeunes de 25 ans restent chez leurs parents. La demande pour les premiers logements diminue ; réduisez la part des petits studios. [Source: Tagi]</p>
+                    <p><strong>Qualité :</strong> La population exige une architecture de qualité plutôt que des mesures antibruit. Augmentez les budgets de planification pour les grands projets afin d'éviter les blocages. [Source: Enquêtes]</p>
+                    <p><strong>Caméras :</strong> Zurich simplifie la vidéosurveillance. Les obstacles juridiques pour la protection des bâtiments diminuent ; équipez systématiquement vos immeubles commerciaux en ville. [Source: Conseil communal]</p>
+                    <p><strong>Robotaxis :</strong> Lucid et Nissan déploient des flottes autonomes. Le besoin de places de parking diminue ; transformez vos parkings en espaces logistiques urbains. [Source: Lucid]</p>
+                    
+                    <h4>GLOBAL</h4>
+                    <p><strong>Guerre :</strong> L'armée américaine utilise Palantir et Anthropic pour diriger des frappes militaires par IA. L'armement et la tech fusionnent ; proposez des surfaces sécurisées à ces entreprises. [Source: Colossus]</p>
+                    <p><strong>Automobile :</strong> Honda enregistre une perte record. Les sous-traitants sont sous pression ; exigez des garanties de loyer accrues de la part des locataires de ce secteur. [Source: Handelsblatt]</p>
+                    
+                    <h4>ÉNERGIE: Le blocage du pétrole</h4>
+                    <p>L'Iran menace de fermer le détroit d'Ormuz. Prix du pétrole au-dessus de 100 dollars. Forcez les entrepreneurs généraux à fixer les prix des matériaux. [Source: IEA]</p>
+                    
+                    <h4>CORPS & ESPRIT: L'illusion des bureaux debout</h4>
+                    <p>Rester debout en permanence augmente la prévalence des maladies veineuses à 83 %. Les bureaux réglables ne suffisent pas seuls ; imposez la circulation physique par des plans de masse décentralisés. [Source: Taylor & Francis]</p>
+                    
+                    <h4>WORLDLY WISDOM</h4>
+                    <p><em>Charlie: “Acknowledging what you don’t know is the dawning of wisdom.”</em> [Poor Charlie’s Almanack]</p>
+                </div>
+            </details>
+        </div>
+    </header>
+
+    <main>
+        <section id="methodik">
+            <h2>La méthode</h2>
+            <h3>Nous filtrons le bruit.</h3>
+            <p>Un décideur n'a pas le temps pour le brouhaha médiatique. Nous analysons chaque jour des centaines de publications et en distillons l'essence stratégique[cite: 277, 278].</p>
+            <h3>Nous apportons le contexte.</h3>
+            <p>Une variation des taux d'intérêt n'est qu'un chiffre isolé. Nous expliquons précisément l'impact de ce mouvement sur vos rendements et le coût de votre capital[cite: 279, 280].</p>
+            <h3>Nous parlons vrai.</h3>
+            <p>La qualité naît ici d'un renoncement radical. Aucun jargon, aucun adjectif, aucune spéculation. Nous publions exclusivement des faits et leurs conséquences[cite: 282, 283].</p>
+        </section>
+        
+        <section id="herausgeber">
+            <h2>L'ÉDITEUR</h2>
+            <h3>L'alignement des intérêts.</h3>
+            <p>Marc Locher dirige l'architecture éditoriale. Il agit comme conseiller stratégique pour le capital institutionnel. Servir précède impérativement la vente [cite: 288-290].</p>
+            <h3>Le système de la constance.</h3>
+            <p>La continuité surpasse l'intensité. La rédaction opère comme un système fermé, éliminant les biais émotionnels grâce à des routines de fer[cite: 294, 295]. Le briefing vous parvient chaque matin avant 6h30[cite: 296].</p>
+        </section>
+
+        <section id="diskurs">
+            <h2>LE DISCOURS STRATÉGIQUE</h2>
+            <h3>La règle de Chatham House.</h3>
+            <p>Ce discours est soumis à la règle de Chatham House. Votre identité et votre affiliation institutionnelle restent absolument protégées, imposant l'honnêteté intellectuelle [cite: 302-304]. Envoyez vos positions directement à la rédaction en chef : mail@morning-espresso.net[cite: 308].</p>
+        </section>
+
+        <section id="angebot">
+            <h2>L'OFFRE</h2>
+            <div class="box">
+                <h3>Période d'essai. 0,00 CHF.</h3>
+                <p>10 numéros (14 jours) pour découvrir notre profondeur éditoriale. L'envoi s'arrête ensuite automatiquement[cite: 314, 315].</p>
+                <form onsubmit="sendTrialEmail(event)" class="subscription-form">
+                    <input type="text" id="fname" placeholder="Prénom" required>
+                    <input type="text" id="lname" placeholder="Nom" required>
+                    <input type="email" id="mail" placeholder="Adresse e-mail" required>
+                    <button type="submit" class="button mocha">TESTER MAINTENANT</button>
+                </form>
+                <script>
+                    function sendTrialEmail(event) {
+                        event.preventDefault();
+                        var fname = document.getElementById('fname').value;
+                        var lname = document.getElementById('lname').value;
+                        var mail = document.getElementById('mail').value;
+
+                        var subject = encodeURIComponent("Souscription : Édition d'essai MORNING ESPRESSO");
+                        var body = encodeURIComponent(
+                            "Bonjour\n\n" +
+                            "Veuillez activer mon accès de 14 jours au briefing stratégique. Mes coordonnées :\n\n" +
+                            "Prénom : " + fname + "\n" +
+                            "Nom : " + lname + "\n" +
+                            "E-mail : " + mail + "\n\n" +
+                            "Cordialement\n" + fname + " " + lname
+                        );
+                        window.location.href = "mailto:mail@morning-espresso.net?subject=" + subject + "&body=" + body;
+                    }
+                </script>
+            </div>
+
+            <div class="box">
+                <h3>Abonnement individuel. 19,90 CHF / mois.</h3>
+                <p>Pour le décideur individuel. Briefing quotidien du lundi au vendredi. Résiliable mensuellement[cite: 316, 317].</p>
+                <a href="https://buy.stripe.com/bJe9AT4rSg7t0xXdMjcwg00" class="button mocha" target="_blank">SOUSCRIRE LE MANDAT</a>
+            </div>
+
+            <div class="box">
+                <h3>Abonnement d'entreprise. 59,90 CHF / mois.</h3>
+                <p>Pour les équipes d'investissement ou les conseils d'administration. Jusqu'à 5 licences. Facturation sur demande[cite: 319, 320].</p>
+                <a href="https://buy.stripe.com/6oU9ATf6w1cza8x37Fcwg01" class="button mocha" target="_blank">ACCÈS ENTREPRISE</a>
+            </div>
+        </section>
+
+        <section id="faq">
+            <h2>Questions fréquentes</h2>
+            <h3>Dans quelles langues le MORNING ESPRESSO est-il publié ?</h3>
+            <p>Vous choisissez après l'inscription entre l'allemand, le français ou l'anglais. Chaque numéro est traduit quotidiennement pour garantir une analyse précise dans votre langue de travail[cite: 322, 323].</p>
+            <h3>Comment fonctionne la période d'essai ?</h3>
+            <p>Pour l'évaluation, vous ne fournissez que votre adresse électronique. L'envoi s'arrête automatiquement après 14 jours, sans qu'aucune résiliation ne soit nécessaire [cite: 324-326].</p>
+            <h3>Comment l'abonnement d'entreprise est-il géré ?</h3>
+            <p>L'utilisateur principal peut inviter jusqu'à quatre décideurs nommément enregistrés. Les entreprises clientes reçoivent sur demande une facture formelle [cite: 327-329].</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="impressum">
+            <p><strong>ÉDITEUR & RÉDACTION</strong><br>
+            Meleven AG | MORNING ESPRESSO<br>
+            Rédacteur en chef : Marc Locher | Gehrenstrasse 10 | 8512 Thundorf | Suisse<br>
+            mail@morning-espresso.net [cite: 338, 339]</p>
+            <p>© 2026 Meleven AG.</p>
+        </div>
+
+        <div class="legal-menu">
+            <details class="footer-details">
+                <summary>CADRE LÉGAL & DROITS D'AUTEUR</summary>
+                <div class="footer-content">
+                    <p>Le MORNING ESPRESSO publie des analyses stratégiques indépendantes. Ce service ne constitue expressément pas un conseil en investissement. Meleven AG décline toute responsabilité quant aux décisions découlant de l'utilisation de ces données. Tous les contenus sont protégés par le droit d'auteur suisse [cite: 340-344].</p>
+                </div>
+            </details>
+            
+            <details class="footer-details">
+                <summary>DOCTRINE ÉDITORIALE</summary>
+                <div class="footer-content">
+                    <p>L'intégrité éditoriale est soumise à un règlement intransigeant de recherche de la vérité. Nous séparons strictement les données de leur interprétation stratégique. Nous refusons catégoriquement toute forme de revenus publicitaires ou de parrainage [cite: 346-348].</p>
+                </div>
+            </details>
+
+            <details class="footer-details">
+                <summary>PROTECTION DES SOURCES</summary>
+                <div class="footer-content">
+                    <p>Nous appliquons systématiquement la règle de Chatham House. Cela garantit l'anonymat absolu de nos informateurs et impose une honnêteté intellectuelle radicale, permettant un accès à la vérité substantielle [cite: 359-364].</p>
+                </div>
+            </details>
+            
+            <details class="footer-details">
+                <summary>MENTIONS LÉGALES</summary>
+                <div class="footer-content">
+                    <p>La responsabilité légale incombe à Meleven AG. Marc Locher en est le rédacteur en chef. Le siège est situé à Thundorf, Suisse. Pour toute prise de contact : mail@morning-espresso.net oder +41 79 930 03 28 [cite: 367-370].</p>
+                </div>
+            </details>
+            
+            <details class="footer-details">
+                <summary>PROTECTION DES DONNÉES</summary>
+                <div class="footer-content">
+                    <p>La collecte de données est réduite au strict minimum pour l'exécution du mandat. Meleven AG ne monétise aucune donnée et renonce aux mécanismes de suivi dissimulés. Les mandants conservent l'entière souveraineté sur leurs données [cite: 375-381].</p>
+                </div>
+            </details>
+
+            <details class="footer-details">
+                <summary>CONDITIONS GÉNÉRALES DE VENTE</summary>
+                <div class="footer-content">
+                    <p>Le contrat prend effet dès la souscription numérique à partir du 15 mars 2026. L'abonnement individuel est à 19,90 CHF/mois. Les mandats sont résiliables à tout moment, sans remboursement pour le mois en cours. Le for exclusif est Frauenfeld [cite: 384-396].</p>
+                </div>
+            </details>
+        </div>
+    </footer>
+
+</body>
+</html>
